@@ -83,13 +83,14 @@ class TaskServer(threading.Thread):
             print(f"{ts()} {client}: отправлен запрос на {task}") # для демонстрации многопоточности
 
             # эмуляция длительных расчетов
+            # Эмуляция — это процесс имитации работы чего-либо в программе
             time.sleep(random.uniform(1, 3)) # случайная пауза 1–3 секунды
 
             result = None
             # выбираем функцию по ключу task
-            try:
+            try:  # ловля возможных ошибок
                 if task == 'common':
-                    result = find_common_numbers(data['arr1'], data['arr2'])
+                    result = find_common_numbers(data['arr1'], data['arr2'])  # Результат работы функции сохраняется в result
                 elif task == 'power':
                     result = compute_power_for_matching_sums(
                         data['arr1'], data['arr2'], data['arr3'], params['indexes']
