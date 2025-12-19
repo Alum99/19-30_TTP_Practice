@@ -1,4 +1,4 @@
-from typing import List импорт типа   # List из модуля typing, который используется для аннотаций типов.
+from typing import List               # импорт типа  List из модуля typing, который используется для аннотаций типов.
                                       # List — это обобщённый тип (generic), который описывает список элементов определённого типа
 
 # Возвращает число, записанное в обратном порядке цифр
@@ -20,7 +20,6 @@ def reverse_number(n: int) -> int:
     """
 
     result = int(str(n)[::-1])
-    logger.debug(f"reverse_number: {n} -> {result}")   # вспомогательная функция, не засоряет лог
     return result
 
 
