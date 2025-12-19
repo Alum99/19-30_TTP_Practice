@@ -3,6 +3,9 @@ import time                     # для пауз между отправкой 
 import random
 from datetime import datetime   # для печати текущего времени
 
+# код реализует клиента в многопоточном приложении клиент/сервер
+# Каждый клиент работает в своём потоке, имитируя одновременную работу нескольких пользователей.
+
 # возвращает текущее время в формате чч:мм:сс
 def ts():
     return datetime.now().strftime("%H:%M:%S")
@@ -36,7 +39,8 @@ class ClientThread(threading.Thread):
     входные данные и результат и сохраняет их в `self.results`.
     """
 
-    def __init__(self, name: str, request_queue, actions):
+    def __init__(self, name: str, request_queue, actions): # конструктор класса ClientThread
+        # Вызывает конструктор базового класса threading.Thread
         super().__init__(daemon=True)         # поток будет автоматически завершаться при закрытии главного потока программы
         self.name = name                      # читаемое имя клиента
         self.request_queue = request_queue    # общая очередь, в которую клиент кладёт запросы для сервера
@@ -55,18 +59,18 @@ class ClientThread(threading.Thread):
             data = action.get('data')           # данные для задачи (массивы, числа и т.д.)
 
             # генерация данных
-            if action.get('generate', False):  # если флаг generate=True, клиент сам создаёт данные для задачи
-                if task == 'common':
-                    la = params.get('len_a', 7)
+            if action.get('generate', False):    # если флаг generate=True, клиент сам создаёт данные для задачи
+                if task == 'common':             # проверяем, какая задача задана
+                    la = params.get('len_a', 7)  # получаем размеры массивов
                     lb = params.get('len_b', 6)
-                    a = [random.randint(0, 99) for _ in range(la)]
+                    a = [random.randint(0, 99) for _ in range(la)]   # Создаём два списка
                     b = [random.randint(0, 99) for _ in range(lb)]
-                    data = {'arr1': a, 'arr2': b}
+                    data = {'arr1': a, 'arr2': b}       # Собираем словарь data, который будет отправлен на сервер.
                     print(f"{ts()} {self.name}: сгенерированы массивы для find_common_numbers")
                     print("A =", a)
                     print("B =", b)
                     print()
-                elif task in ('process',):
+                elif task in ('process',):        # проверяем, какая задача задана
                     la = lb = params.get('len_a', 5)
                     a = [random.randint(0, 9) for _ in range(la)]
                     b = [random.randint(0, 9) for _ in range(lb)]
