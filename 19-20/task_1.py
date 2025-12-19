@@ -86,12 +86,8 @@ def find_common_numbers(arr1: List[int], arr2: List[int]) -> int:
         :raises ValueError: если один или оба массива пустые
     """
 
-    logger.info("Вызов find_common_numbers()")
-
     if not arr1 or not arr2:
-        logger.error("Массивы не заданы или пусты")
         raise ValueError("Массивы не заданы или пусты")
 
     count = count_common_and_reversed(arr1, arr2)
-    logger.info(f"Количество общих чисел (с учётом перевёрнутых): {count}")
     return count
