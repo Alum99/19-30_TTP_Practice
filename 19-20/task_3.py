@@ -19,8 +19,7 @@ def sort_arrays(arr1: List[int], arr2: List[int]) -> tuple[List[int], List[int]]
     >> sort_arrays([3, 1, 2], [5, 4, 6])
     ([3, 2, 1], [4, 5, 6]
     """
-
-    logger.info("Сортировка массивов")
+    
     return sorted(arr1, reverse=True), sorted(arr2)
 
 
@@ -47,8 +46,6 @@ def sum_arrays(arr1: List[int], arr2: List[int]) -> List[int]:
     >> sum_arrays([1, 2, 3], [3, 2, 1])
     [4, 0, 4]
     """
-
-    logger.info("Сложение массивов")
 
     if len(arr1) != len(arr2):
         raise ValueError("Массивы должны быть одинаковой длины")   # логическая проверка
@@ -79,14 +76,11 @@ def process_arrays(arr1: List[int], arr2: List[int]) -> List[int]:
 
     # сортировка массивов
     arr1_sorted, arr2_sorted = sort_arrays(arr1, arr2)
-    logger.debug(f"Отсортированные массивы: {arr1_sorted}, {arr2_sorted}")
 
     # поэлементное сложение с правилом "0 при равенстве"
     summed_array = sum_arrays(arr1_sorted, arr2_sorted)
-    logger.debug(f"Массив после сложения: {summed_array}")
 
     # сортировка итогового массива по возрастанию
     result = sorted(summed_array)
-    logger.info(f"Итоговый массив после сортировки: {result}")
 
     return result
