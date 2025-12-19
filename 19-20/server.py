@@ -45,7 +45,7 @@ class TaskServer(threading.Thread):
     }
     """
 
-    def __init__(self, request_queue: queue.Queue):
+    def __init__(self, request_queue: queue.Queue): # конструктор класса, параметры: очередь запросов от клиентов
         super().__init__(daemon=True)          # поток сервера завершается автоматически при закрытии программы
         self.request_queue = request_queue     # очередь, в которую клиенты будут помещать запросы
         self.running = True                    # флаг, управляющий основным циклом сервера
