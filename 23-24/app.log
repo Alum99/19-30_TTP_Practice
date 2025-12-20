@@ -1,0 +1,48 @@
+2025-12-20 19:55:18,886 - INFO - MAIN choice: 1
+2025-12-20 19:55:22,036 - INFO - task1 choice=1, state=NO_DATA
+2025-12-20 19:55:30,247 - INFO - Arrays input manually
+2025-12-20 19:55:35,331 - INFO - task1 choice=3, state=HAS_DATA
+2025-12-20 19:55:35,331 - ERROR - Calculation error: Массивы не заданы или пусты
+2025-12-20 19:55:41,419 - INFO - task1 choice=4, state=HAS_DATA
+2025-12-20 19:55:45,573 - INFO - task1 choice=2, state=HAS_DATA
+2025-12-20 19:55:45,573 - INFO - Invalid menu choice
+2025-12-20 19:55:53,497 - INFO - task1 choice=1, state=HAS_DATA
+2025-12-20 19:55:53,497 - INFO - Invalid menu choice
+2025-12-20 19:56:02,744 - INFO - MAIN choice: 1
+2025-12-20 19:56:03,779 - INFO - task1 choice=2, state=NO_DATA
+2025-12-20 19:56:05,867 - INFO - Generating a random array
+2025-12-20 19:56:05,868 - INFO - Generating a random array
+2025-12-20 19:56:05,868 - INFO - Arrays generated randomly
+2025-12-20 19:56:12,644 - INFO - task1 choice=3, state=HAS_DATA
+2025-12-20 19:56:12,645 - INFO - Common numbers calculated: 0
+2025-12-20 19:56:18,073 - INFO - task1 choice=8, state=HAS_RESULT
+2025-12-20 19:56:18,074 - INFO - Invalid menu choice
+2025-12-20 19:56:20,817 - INFO - task1 choice=4, state=HAS_RESULT
+2025-12-20 19:56:20,817 - INFO - Result displayed
+2025-12-20 19:56:26,547 - INFO - task1 choice=5, state=HAS_RESULT
+2025-12-20 19:56:28,095 - INFO - MAIN choice: 2
+2025-12-20 19:56:32,694 - INFO - task2 choice=2, state=NO_DATA
+2025-12-20 19:56:35,914 - INFO - generating a random array
+2025-12-20 19:56:35,914 - INFO - generating a random array
+2025-12-20 19:56:35,914 - INFO - generating a random array
+2025-12-20 19:56:35,914 - INFO - Arrays generated randomly
+2025-12-20 19:56:41,548 - INFO - task2 choice=3, state=HAS_DATA
+2025-12-20 19:56:41,548 - INFO - task2: sum_and_power()
+2025-12-20 19:56:41,548 - INFO - Computation done, results: []
+2025-12-20 19:56:45,431 - INFO - task2 choice=4, state=HAS_RESULT
+2025-12-20 19:56:47,406 - INFO - task2 choice=5, state=HAS_RESULT
+2025-12-20 19:56:48,769 - INFO - MAIN choice: 3
+2025-12-20 19:56:50,651 - INFO - task3 choice=3, state=NO_DATA
+2025-12-20 19:56:55,641 - INFO - task3 choice=1, state=NO_DATA
+2025-12-20 19:57:01,946 - INFO - Arrays input manually
+2025-12-20 19:57:04,743 - INFO - task3 choice=3, state=HAS_DATA
+2025-12-20 19:57:04,744 - INFO - task_3: sort_and_sum_arrays()
+2025-12-20 19:57:04,744 - INFO - Computation done, result: [-1, 1, 6]
+2025-12-20 19:57:08,194 - INFO - task3 choice=4, state=HAS_RESULT
+2025-12-20 19:57:08,195 - INFO - Result displayed
+2025-12-20 19:57:15,347 - INFO - task3 choice=5, state=HAS_RESULT
+2025-12-20 19:57:20,596 - INFO - MAIN choice: 1
+2025-12-20 19:57:25,718 - INFO - task1 choice=6, state=NO_DATA
+2025-12-20 19:57:27,774 - INFO - task1 choice=5, state=NO_DATA
+2025-12-20 19:57:29,394 - INFO - MAIN choice: 0
+2025-12-20 19:57:29,394 - INFO - Application exit
