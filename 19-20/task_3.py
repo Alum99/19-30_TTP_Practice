@@ -1,5 +1,6 @@
 from typing import List
 
+
 # сортировка массивов по условиям
 def sort_arrays(arr1: List[int], arr2: List[int]) -> tuple[List[int], List[int]]:
     """
@@ -19,7 +20,6 @@ def sort_arrays(arr1: List[int], arr2: List[int]) -> tuple[List[int], List[int]]
     >> sort_arrays([3, 1, 2], [5, 4, 6])
     ([3, 2, 1], [4, 5, 6]
     """
-    
     return sorted(arr1, reverse=True), sorted(arr2)
 
 
@@ -48,7 +48,7 @@ def sum_arrays(arr1: List[int], arr2: List[int]) -> List[int]:
     """
 
     if len(arr1) != len(arr2):
-        raise ValueError("Массивы должны быть одинаковой длины")   # логическая проверка
+        raise ValueError("Массивы должны быть одинаковой длины")  # логическая проверка
 
     return [0 if a == b else a + b for a, b in zip(arr1, arr2)]
 

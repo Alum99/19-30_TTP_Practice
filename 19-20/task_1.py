@@ -91,3 +91,5 @@ def find_common_numbers(arr1: List[int], arr2: List[int]) -> int:
 
     count = count_common_and_reversed(arr1, arr2)
     return count
+
+
