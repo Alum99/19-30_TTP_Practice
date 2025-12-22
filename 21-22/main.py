@@ -1,9 +1,3 @@
-from logger import logger
-from messages import MESSAGES
-from task_1 import task1_menu
-from task_2 import task2_menu
-from task_3 import task3_menu
-
 """
 Главный модуль приложения (конечный автомат главного меню).
 
@@ -36,7 +30,12 @@ ACTION_MAP : dict
     - task_1_menu(), task_2_menu(), task_3_menu() находятся в соответствующих модулях
       task_1.py / task_2.py / task_3.py.
 """
-
+# main.py — это контроллер
+from logger import logger
+from messages import MESSAGES
+from task_1 import task1_menu
+from task_2 import task2_menu
+from task_3 import task3_menu
 
 # FSM главного меню (логика переходов)
 
@@ -73,6 +72,7 @@ def do_exit():
 
 
 # Словарь обработчиков (action → function)
+# ACTION_MAP превращает строковое имя действия из FSM в конкретную вызываемую функцию
 
 ACTION_MAP = {
     "task1": do_task1,
@@ -99,25 +99,25 @@ def main():
         Если в FSM отсутствует действие с указанным именем
         (что указывает на ошибку конфигурации).
     """
-    state = "MAIN"
-    msgs = MESSAGES["main_menu"]
+    state = "MAIN" # текущее состояние конечного автомата
+    msgs = MESSAGES["main_menu"] # Из словаря MESSAGES извлекаются текстовые сообщения
 
-    while True:
-        print("\n" + msgs["title"])
-        for opt in msgs["options"]:
+    while True: # цикл программы
+        print("\n" + msgs["title"]) # вывод заголовка меню
+        for opt in msgs["options"]: # проход по списку вариантов (например "1 - Task 1", "2 - Task 2", …).
             print(opt)
 
-        choice = input(msgs["prompt"]).strip()
-        logger.info(f"Главное меню: ввод пользователя → {choice}")
+        choice = input(msgs["prompt"]).strip()  # Ввод пользователя
+        logger.info(f"Главное меню: ввод пользователя → {choice}") # логирование ввода
 
-        entry = MAIN_FSM[state].get(choice)
-        if not entry:
+        entry = MAIN_FSM[state].get(choice) # Поиск перехода в FSM
+        if not entry: # проверка на неверный ввода
             print(msgs["invalid"])
             logger.warning("Main: неверный пункт меню")
             continue
 
-        action_name = entry["action"]
-        handler = ACTION_MAP[action_name]
+        action_name = entry["action"] # Получение имени действия
+        handler = ACTION_MAP[action_name] # Получение обработчика по имени
 
         result = handler()   # вызов обработчика
         if result is False:  # если обработчик сигнализировал выход
