@@ -116,6 +116,7 @@ def count_common_and_reversed(arr1: list[int], arr2: list[int]) -> int:
 # -------------------------------------------------------
 # ОБРАБОТЧИКИ ДЕЙСТВИЙ FSM - Finite State Machine (конечный автомат меню)
 # -------------------------------------------------------
+# Каждому пункту меню соответствует своя функция
 
 def _input_arrays(state_container):
     """Ввод двух массивов вручную и сохранение их в состояние FSM."""
@@ -193,6 +194,7 @@ def _back(state_container):
 # ACTION MAP - словарь, который связывает выбор пользователя с конкретной функцией
 # -------------------------------------------------------
 
+# словарь, который связывает текстовое имя действия с функцией
 ACTION_MAP = {
     "input_arrays": _input_arrays,
     "generate_arrays": _generate_arrays,
@@ -205,6 +207,7 @@ ACTION_MAP = {
 # -------------------------------------------------------
 # FSM TRANSITIONS - переходы конечного автомата
 # -------------------------------------------------------
+# TRANSITIONS — это словарь
 
 TRANSITIONS = {
     "NO_DATA": {
@@ -246,24 +249,27 @@ def task1_menu():
     Возвращает:
         None (возврат в главное меню)
     """
+    # словарь, который хранит всё текущее состояние моей задачи (контейнер состояния)
     state_container = {"arr1": None, "arr2": None, "result": None}
-    state = "NO_DATA"
+    # функция работает с состоянием, но не зависит от глобальных переменных
+    state = "NO_DATA" # стартовое состояние
 
-    while True:
-        print("\n" + msgs["title"])
+    while True: # основной цикл меню
+        print("\n" + msgs["title"]) # вывод меню
         for option in msgs["menu"]:
             print(option)
 
         choice = input(msgs["prompt"]).strip()
-        logger.info(f"task1 choice: {choice} (state={state})")
+        logger.info(f"task1 choice: {choice} (state={state})") # фиксирует выбор и состояние FSM
 
-        entry = TRANSITIONS[state].get(choice)
-        if not entry:
+        entry = TRANSITIONS[state].get(choice) # получение инструкции 
+        if not entry: # если такого пункта нет, то сообщение, повторяем цикл
             print(msgs["invalid_choice"])
             logger.info("task1: неверный пункт меню")
-            continue
+            continue 
 
-        if "error" in entry:
+        if "error" in entry: # если действие нельзя выполнить в текущем состоянии
+            # выводит сообщение и не выполняет действие
             key = entry["error"]
             if key == "no_data":
                 print(msgs["no_data"])
@@ -273,13 +279,13 @@ def task1_menu():
                 logger.warning("task1: попытка показать результат без вычислений")
             continue
 
-        action_name = entry.get("action")
+        action_name = entry.get("action") # название действия (например input_arrays)
         next_state = entry.get("next", state)
         action = ACTION_MAP.get(action_name)
         if action:
-            action(state_container)
+            action(state_container) # функции получают state_container
 
-        if next_state == "BACK":
+        if next_state == "BACK": # если назад, то функция task1_menu завершается
             return
 
-        state = next_state
+        state = next_state # иначе FSM переходит в следующее состояние
