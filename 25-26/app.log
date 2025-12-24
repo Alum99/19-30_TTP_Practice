@@ -1,0 +1,537 @@
+2025-12-23 21:30:24,907 - INFO - FSM создана для user=870796935
+2025-12-23 21:30:33,293 - INFO - MAIN choice: 1
+2025-12-23 21:30:38,323 - INFO - task1 choice=1, state=NO_DATA
+2025-12-23 21:30:42,154 - ERROR - Ошибка FSM у user=870796935: generator already executing
+Traceback (most recent call last):
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/tg_bot.py", line 57, in handle_input
+    result = fsm.send(text)
+             ^^^^^^^^^^^^^^
+ValueError: generator already executing
+2025-12-24 08:51:21,146 - INFO - FSM создана для user=870796935
+2025-12-24 08:54:00,440 - INFO - FSM создана для user=870796935
+2025-12-24 08:56:10,832 - INFO - FSM создана для user=870796935
+2025-12-24 08:56:26,183 - INFO - FSM создана для user=870796935
+2025-12-24 08:57:06,298 - INFO - MAIN choice: 1
+2025-12-24 09:05:29,289 - INFO - MAIN choice: 1
+2025-12-24 09:05:29,654 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-12-24 09:05:29,655 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/util.py", line 97, in run
+    task(*args, **kwargs)
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/tg_bot.py", line 45, in user_input
+    bot.send_message(uid, text)           # присылаем следующее меню/ответ
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 1811, in send_message
+    apihelper.send_message(
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 282, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+
+2025-12-24 09:13:09,149 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-12-24 09:13:09,150 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/util.py", line 97, in run
+    task(*args, **kwargs)
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/tg_bot.py", line 31, in start
+    bot.send_message(uid, text)
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 1811, in send_message
+    apihelper.send_message(
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 282, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+
+2025-12-24 09:13:11,642 - INFO - MAIN choice: 1
+2025-12-24 09:13:52,405 - INFO - MAIN choice: 2
+2025-12-24 09:13:52,514 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-12-24 09:13:52,517 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/util.py", line 97, in run
+    task(*args, **kwargs)
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/tg_bot.py", line 45, in user_input
+    bot.send_message(uid, text)           # присылаем следующее меню/ответ
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 1811, in send_message
+    apihelper.send_message(
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 282, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+
+2025-12-24 09:16:53,775 - INFO - MAIN choice: 1
+2025-12-24 09:17:02,492 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+2025-12-24 09:17:02,494 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/util.py", line 97, in run
+    task(*args, **kwargs)
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/tg_bot.py", line 45, in user_input
+    bot.send_message(uid, text)           # присылаем следующее меню/ответ
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/__init__.py", line 1811, in send_message
+    apihelper.send_message(
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 282, in send_message
+    return _make_request(token, method_url, params=payload, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/telebot/apihelper.py", line 197, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+
+2025-12-24 09:21:32,707 - INFO - MAIN choice: 1
+2025-12-24 09:21:57,481 - INFO - MAIN choice: 2
+2025-12-24 09:32:01,355 - INFO - Start polling
+2025-12-24 09:32:01,773 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 09:32:13,641 - INFO - Update id=803257593 is handled. Duration 339 ms by bot id=8546433771
+2025-12-24 09:32:16,456 - INFO - Update id=803257594 is handled. Duration 120 ms by bot id=8546433771
+2025-12-24 09:32:21,139 - WARNING - Received SIGINT signal
+2025-12-24 09:32:21,139 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 09:32:21,139 - INFO - Polling stopped
+2025-12-24 09:35:28,065 - INFO - Start polling
+2025-12-24 09:35:28,395 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 09:35:36,268 - INFO - Update id=803257595 is handled. Duration 324 ms by bot id=8546433771
+2025-12-24 09:35:38,096 - INFO - Update id=803257596 is handled. Duration 150 ms by bot id=8546433771
+2025-12-24 09:35:43,231 - INFO - Update id=803257597 is handled. Duration 171 ms by bot id=8546433771
+2025-12-24 09:36:05,737 - INFO - Update id=803257598 is handled. Duration 141 ms by bot id=8546433771
+2025-12-24 09:36:25,291 - INFO - Update id=803257599 is handled. Duration 124 ms by bot id=8546433771
+2025-12-24 09:36:27,087 - INFO - Update id=803257600 is handled. Duration 122 ms by bot id=8546433771
+2025-12-24 09:36:29,488 - INFO - Update id=803257601 is handled. Duration 128 ms by bot id=8546433771
+2025-12-24 09:36:38,012 - INFO - Update id=803257602 is handled. Duration 136 ms by bot id=8546433771
+2025-12-24 09:36:41,914 - INFO - Update id=803257603 is handled. Duration 132 ms by bot id=8546433771
+2025-12-24 09:36:46,079 - WARNING - Received SIGINT signal
+2025-12-24 09:36:46,080 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 09:36:46,080 - INFO - Polling stopped
+2025-12-24 11:48:51,875 - INFO - Start polling
+2025-12-24 11:48:52,314 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 11:49:13,843 - INFO - Update id=803257604 is handled. Duration 383 ms by bot id=8546433771
+2025-12-24 11:49:15,573 - INFO - Update id=803257605 is handled. Duration 122 ms by bot id=8546433771
+2025-12-24 11:49:18,275 - INFO - Update id=803257606 is handled. Duration 190 ms by bot id=8546433771
+2025-12-24 11:49:20,952 - INFO - Update id=803257607 is not handled. Duration 5 ms by bot id=8546433771
+2025-12-24 11:53:55,847 - WARNING - Received SIGINT signal
+2025-12-24 11:53:55,849 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 11:53:55,849 - INFO - Polling stopped
+2025-12-24 11:59:21,955 - INFO - Start polling
+2025-12-24 11:59:22,465 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 11:59:27,841 - INFO - Update id=803257608 is not handled. Duration 3 ms by bot id=8546433771
+2025-12-24 11:59:31,890 - INFO - Update id=803257609 is handled. Duration 337 ms by bot id=8546433771
+2025-12-24 11:59:35,594 - INFO - Update id=803257610 is handled. Duration 133 ms by bot id=8546433771
+2025-12-24 11:59:43,905 - INFO - Update id=803257611 is handled. Duration 154 ms by bot id=8546433771
+2025-12-24 11:59:45,657 - INFO - Update id=803257612 is not handled. Duration 4 ms by bot id=8546433771
+2025-12-24 11:59:58,092 - INFO - Update id=803257613 is not handled. Duration 2 ms by bot id=8546433771
+2025-12-24 12:00:48,944 - WARNING - Received SIGINT signal
+2025-12-24 12:00:48,945 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 12:00:48,945 - INFO - Polling stopped
+2025-12-24 12:00:51,097 - INFO - Start polling
+2025-12-24 12:00:51,432 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 12:03:53,213 - WARNING - Received SIGINT signal
+2025-12-24 12:03:53,214 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 12:03:53,214 - INFO - Polling stopped
+2025-12-24 12:03:55,478 - INFO - Start polling
+2025-12-24 12:03:55,871 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 12:04:02,810 - INFO - Update id=803257614 is handled. Duration 347 ms by bot id=8546433771
+2025-12-24 12:04:04,623 - INFO - Update id=803257615 is handled. Duration 144 ms by bot id=8546433771
+2025-12-24 12:04:06,939 - INFO - Update id=803257616 is handled. Duration 138 ms by bot id=8546433771
+2025-12-24 12:04:12,438 - INFO - Update id=803257617 is not handled. Duration 5 ms by bot id=8546433771
+2025-12-24 12:29:10,266 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-12-24 12:29:10,268 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8546433771)
+2025-12-24 12:29:11,276 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 12:29:11,276 - WARNING - Sleep for 1.262315 seconds and try again... (tryings = 1, bot id = 8546433771)
+2025-12-24 12:29:12,545 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 12:29:12,545 - WARNING - Sleep for 1.752417 seconds and try again... (tryings = 2, bot id = 8546433771)
+2025-12-24 12:29:14,303 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 12:29:14,304 - WARNING - Sleep for 2.485489 seconds and try again... (tryings = 3, bot id = 8546433771)
+2025-12-24 12:29:16,795 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 12:29:16,795 - WARNING - Sleep for 3.130998 seconds and try again... (tryings = 4, bot id = 8546433771)
+2025-12-24 12:46:45,234 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 12:46:45,235 - WARNING - Sleep for 4.015467 seconds and try again... (tryings = 5, bot id = 8546433771)
+2025-12-24 13:04:41,996 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:04:41,997 - WARNING - Sleep for 5.096123 seconds and try again... (tryings = 6, bot id = 8546433771)
+2025-12-24 13:20:02,841 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:20:02,841 - WARNING - Sleep for 5.011235 seconds and try again... (tryings = 7, bot id = 8546433771)
+2025-12-24 13:38:02,605 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:38:02,605 - WARNING - Sleep for 5.100856 seconds and try again... (tryings = 8, bot id = 8546433771)
+2025-12-24 13:53:28,134 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:53:28,135 - WARNING - Sleep for 5.186238 seconds and try again... (tryings = 9, bot id = 8546433771)
+2025-12-24 13:53:33,328 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:53:33,328 - WARNING - Sleep for 4.884101 seconds and try again... (tryings = 10, bot id = 8546433771)
+2025-12-24 13:53:38,218 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:53:38,219 - WARNING - Sleep for 5.151076 seconds and try again... (tryings = 11, bot id = 8546433771)
+2025-12-24 13:53:43,374 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:53:43,374 - WARNING - Sleep for 5.019034 seconds and try again... (tryings = 12, bot id = 8546433771)
+2025-12-24 13:53:48,398 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:53:48,399 - WARNING - Sleep for 4.967121 seconds and try again... (tryings = 13, bot id = 8546433771)
+2025-12-24 13:53:53,372 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:53:53,372 - WARNING - Sleep for 5.037042 seconds and try again... (tryings = 14, bot id = 8546433771)
+2025-12-24 13:53:58,415 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:53:58,416 - WARNING - Sleep for 4.885092 seconds and try again... (tryings = 15, bot id = 8546433771)
+2025-12-24 13:54:03,306 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:54:03,306 - WARNING - Sleep for 5.082018 seconds and try again... (tryings = 16, bot id = 8546433771)
+2025-12-24 13:55:01,315 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:55:01,316 - WARNING - Sleep for 5.009623 seconds and try again... (tryings = 17, bot id = 8546433771)
+2025-12-24 13:55:06,330 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:55:06,330 - WARNING - Sleep for 5.033728 seconds and try again... (tryings = 18, bot id = 8546433771)
+2025-12-24 13:55:51,120 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:55:51,120 - WARNING - Sleep for 4.798066 seconds and try again... (tryings = 19, bot id = 8546433771)
+2025-12-24 13:55:55,925 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:55:55,926 - WARNING - Sleep for 5.030265 seconds and try again... (tryings = 20, bot id = 8546433771)
+2025-12-24 13:56:00,962 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:56:00,963 - WARNING - Sleep for 5.085946 seconds and try again... (tryings = 21, bot id = 8546433771)
+2025-12-24 13:56:06,054 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:56:06,054 - WARNING - Sleep for 4.934317 seconds and try again... (tryings = 22, bot id = 8546433771)
+2025-12-24 13:56:10,993 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:56:10,993 - WARNING - Sleep for 4.864519 seconds and try again... (tryings = 23, bot id = 8546433771)
+2025-12-24 13:56:15,860 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:56:15,860 - WARNING - Sleep for 5.073608 seconds and try again... (tryings = 24, bot id = 8546433771)
+2025-12-24 13:56:20,943 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:56:20,944 - WARNING - Sleep for 5.053421 seconds and try again... (tryings = 25, bot id = 8546433771)
+2025-12-24 13:56:26,002 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:56:26,003 - WARNING - Sleep for 5.009033 seconds and try again... (tryings = 26, bot id = 8546433771)
+2025-12-24 13:57:16,252 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Network is unreachable]
+2025-12-24 13:57:16,253 - WARNING - Sleep for 4.984341 seconds and try again... (tryings = 27, bot id = 8546433771)
+2025-12-24 13:58:54,387 - INFO - Connection established (tryings = 28, bot id = 8546433771)
+2025-12-24 14:44:45,004 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-12-24 14:44:45,006 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8546433771)
+2025-12-24 14:44:56,326 - INFO - Connection established (tryings = 1, bot id = 8546433771)
+2025-12-24 15:31:09,626 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-12-24 15:31:09,628 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8546433771)
+2025-12-24 15:31:27,893 - INFO - Connection established (tryings = 1, bot id = 8546433771)
+2025-12-24 17:01:54,555 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-12-24 17:01:54,556 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8546433771)
+2025-12-24 17:02:05,878 - INFO - Connection established (tryings = 1, bot id = 8546433771)
+2025-12-24 17:25:54,964 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-12-24 17:25:54,964 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8546433771)
+2025-12-24 17:52:58,248 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-12-24 17:52:58,249 - WARNING - Sleep for 1.108127 seconds and try again... (tryings = 1, bot id = 8546433771)
+2025-12-24 17:53:09,789 - INFO - Connection established (tryings = 2, bot id = 8546433771)
+2025-12-24 18:17:46,023 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-12-24 18:17:46,024 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8546433771)
+2025-12-24 18:17:58,713 - INFO - Connection established (tryings = 1, bot id = 8546433771)
+2025-12-24 18:37:30,203 - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2025-12-24 18:37:30,205 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8546433771)
+2025-12-24 18:37:42,548 - INFO - Connection established (tryings = 1, bot id = 8546433771)
+2025-12-24 18:56:20,772 - WARNING - Received SIGINT signal
+2025-12-24 18:56:20,774 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 18:56:20,774 - INFO - Polling stopped
+2025-12-24 18:56:22,880 - INFO - Start polling
+2025-12-24 18:56:23,920 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 18:56:33,913 - INFO - Update id=803257618 is handled. Duration 403 ms by bot id=8546433771
+2025-12-24 18:56:43,601 - INFO - Update id=803257619 is handled. Duration 2028 ms by bot id=8546433771
+2025-12-24 18:56:48,990 - INFO - Update id=803257620 is handled. Duration 243 ms by bot id=8546433771
+2025-12-24 18:56:54,566 - INFO - Update id=803257621 is handled. Duration 3 ms by bot id=8546433771
+2025-12-24 18:57:59,597 - WARNING - Received SIGINT signal
+2025-12-24 18:57:59,598 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 18:57:59,598 - INFO - Polling stopped
+2025-12-24 18:58:01,890 - INFO - Start polling
+2025-12-24 18:58:02,229 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 18:58:02,611 - WARNING - Received SIGINT signal
+2025-12-24 18:58:02,612 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 18:58:02,612 - INFO - Polling stopped
+2025-12-24 18:58:07,293 - INFO - Start polling
+2025-12-24 18:58:07,640 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 18:58:13,626 - INFO - Update id=803257622 is handled. Duration 392 ms by bot id=8546433771
+2025-12-24 18:58:15,893 - INFO - Update id=803257623 is handled. Duration 162 ms by bot id=8546433771
+2025-12-24 18:58:23,744 - INFO - Update id=803257624 is handled. Duration 140 ms by bot id=8546433771
+2025-12-24 18:58:26,074 - INFO - Update id=803257625 is handled. Duration 276 ms by bot id=8546433771
+2025-12-24 18:58:32,496 - INFO - Update id=803257626 is handled. Duration 2 ms by bot id=8546433771
+2025-12-24 18:58:39,873 - WARNING - Received SIGINT signal
+2025-12-24 18:58:39,873 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 18:58:39,873 - INFO - Polling stopped
+2025-12-24 19:00:11,557 - INFO - Start polling
+2025-12-24 19:00:11,912 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:00:17,044 - INFO - Update id=803257627 is handled. Duration 375 ms by bot id=8546433771
+2025-12-24 19:00:20,047 - INFO - Update id=803257628 is handled. Duration 1396 ms by bot id=8546433771
+2025-12-24 19:00:23,893 - INFO - Update id=803257629 is handled. Duration 1487 ms by bot id=8546433771
+2025-12-24 19:00:29,448 - INFO - Update id=803257630 is handled. Duration 263 ms by bot id=8546433771
+2025-12-24 19:00:32,544 - INFO - Update id=803257631 is handled. Duration 2 ms by bot id=8546433771
+2025-12-24 19:00:38,995 - INFO - Update id=803257632 is handled. Duration 3 ms by bot id=8546433771
+2025-12-24 19:01:06,140 - WARNING - Received SIGINT signal
+2025-12-24 19:01:06,141 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:01:06,141 - INFO - Polling stopped
+2025-12-24 19:02:37,280 - INFO - Start polling
+2025-12-24 19:02:37,644 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:02:38,172 - INFO - Update id=803257633 is handled. Duration 398 ms by bot id=8546433771
+2025-12-24 19:02:43,812 - INFO - Update id=803257634 is handled. Duration 180 ms by bot id=8546433771
+2025-12-24 19:02:47,507 - INFO - Update id=803257635 is handled. Duration 137 ms by bot id=8546433771
+2025-12-24 19:02:54,819 - INFO - Update id=803257636 is handled. Duration 317 ms by bot id=8546433771
+2025-12-24 19:02:58,134 - INFO - Update id=803257637 is handled. Duration 7 ms by bot id=8546433771
+2025-12-24 19:09:00,508 - WARNING - Received SIGINT signal
+2025-12-24 19:09:00,510 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:09:00,510 - INFO - Polling stopped
+2025-12-24 19:09:04,869 - INFO - Start polling
+2025-12-24 19:09:05,238 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:09:09,256 - INFO - Update id=803257638 is handled. Duration 359 ms by bot id=8546433771
+2025-12-24 19:09:11,077 - INFO - Update id=803257639 is handled. Duration 235 ms by bot id=8546433771
+2025-12-24 19:09:12,920 - INFO - Update id=803257640 is handled. Duration 181 ms by bot id=8546433771
+2025-12-24 19:09:16,473 - INFO - Update id=803257641 is handled. Duration 293 ms by bot id=8546433771
+2025-12-24 19:09:19,011 - INFO - Update id=803257642 is handled. Duration 189 ms by bot id=8546433771
+2025-12-24 19:09:21,901 - INFO - Update id=803257643 is handled. Duration 131 ms by bot id=8546433771
+2025-12-24 19:11:11,623 - WARNING - Received SIGINT signal
+2025-12-24 19:11:11,624 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:11:11,624 - INFO - Polling stopped
+2025-12-24 19:13:48,364 - INFO - Start polling
+2025-12-24 19:13:49,033 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:13:49,150 - INFO - Update id=803257644 is not handled. Duration 2 ms by bot id=8546433771
+2025-12-24 19:13:51,598 - INFO - Update id=803257645 is not handled. Duration 11 ms by bot id=8546433771
+2025-12-24 19:13:53,767 - INFO - Update id=803257646 is not handled. Duration 5 ms by bot id=8546433771
+2025-12-24 19:13:54,716 - INFO - Update id=803257647 is not handled. Duration 3 ms by bot id=8546433771
+2025-12-24 19:13:59,505 - INFO - Update id=803257648 is handled. Duration 375 ms by bot id=8546433771
+2025-12-24 19:14:02,152 - INFO - Update id=803257649 is handled. Duration 127 ms by bot id=8546433771
+2025-12-24 19:14:07,386 - INFO - generating a random array
+2025-12-24 19:14:07,387 - INFO - generating a random array
+2025-12-24 19:14:07,388 - INFO - generating a random array
+2025-12-24 19:14:07,523 - INFO - Update id=803257650 is handled. Duration 138 ms by bot id=8546433771
+2025-12-24 19:14:09,456 - INFO - task2: sum_and_power()
+2025-12-24 19:14:09,591 - INFO - Update id=803257651 is handled. Duration 135 ms by bot id=8546433771
+2025-12-24 19:14:12,196 - INFO - Update id=803257652 is handled. Duration 154 ms by bot id=8546433771
+2025-12-24 19:14:17,839 - INFO - Update id=803257653 is handled. Duration 154 ms by bot id=8546433771
+2025-12-24 19:14:21,960 - INFO - Update id=803257654 is handled. Duration 137 ms by bot id=8546433771
+2025-12-24 19:14:23,347 - INFO - Update id=803257655 is handled. Duration 138 ms by bot id=8546433771
+2025-12-24 19:16:10,183 - WARNING - Received SIGINT signal
+2025-12-24 19:16:10,184 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:16:10,185 - INFO - Polling stopped
+2025-12-24 19:16:12,576 - INFO - Start polling
+2025-12-24 19:16:12,891 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:16:44,316 - INFO - Update id=803257656 is not handled. Duration 10 ms by bot id=8546433771
+2025-12-24 19:16:51,363 - INFO - Update id=803257657 is handled. Duration 544 ms by bot id=8546433771
+2025-12-24 19:16:52,968 - INFO - Update id=803257658 is handled. Duration 142 ms by bot id=8546433771
+2025-12-24 19:16:55,270 - INFO - generating a random array
+2025-12-24 19:16:55,270 - INFO - generating a random array
+2025-12-24 19:16:55,270 - INFO - generating a random array
+2025-12-24 19:16:55,546 - INFO - Update id=803257659 is handled. Duration 278 ms by bot id=8546433771
+2025-12-24 19:16:57,436 - INFO - task2: sum_and_power()
+2025-12-24 19:16:57,569 - INFO - Update id=803257660 is handled. Duration 136 ms by bot id=8546433771
+2025-12-24 19:17:03,782 - INFO - Update id=803257661 is handled. Duration 137 ms by bot id=8546433771
+2025-12-24 19:20:45,288 - INFO - Update id=803257662 is handled. Duration 184 ms by bot id=8546433771
+2025-12-24 19:20:48,027 - INFO - Update id=803257663 is handled. Duration 161 ms by bot id=8546433771
+2025-12-24 19:20:50,776 - INFO - Update id=803257664 is handled. Duration 138 ms by bot id=8546433771
+2025-12-24 19:21:27,823 - INFO - Update id=803257665 is handled. Duration 142 ms by bot id=8546433771
+2025-12-24 19:21:31,982 - INFO - task_3: sort_and_sum_arrays()
+2025-12-24 19:21:32,112 - INFO - Update id=803257666 is handled. Duration 133 ms by bot id=8546433771
+2025-12-24 19:21:34,074 - INFO - Update id=803257667 is handled. Duration 156 ms by bot id=8546433771
+2025-12-24 19:21:51,138 - INFO - Update id=803257668 is handled. Duration 139 ms by bot id=8546433771
+2025-12-24 19:22:00,650 - INFO - Update id=803257669 is handled. Duration 274 ms by bot id=8546433771
+2025-12-24 19:22:02,684 - INFO - Update id=803257670 is handled. Duration 140 ms by bot id=8546433771
+2025-12-24 19:22:04,125 - INFO - Update id=803257671 is handled. Duration 147 ms by bot id=8546433771
+2025-12-24 19:22:07,074 - INFO - Update id=803257672 is not handled. Duration 4 ms by bot id=8546433771
+2025-12-24 19:22:07,074 - ERROR - Cause exception while process update id=803257672 by bot id=8546433771
+TypeError: 'int' object is not subscriptable
+Traceback (most recent call last):
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/tg_bot.py", line 239, in task2_show
+    f"Index {r['index']}: sum={r['sum']}, power={r['power']}"
+             ~^^^^^^^^^
+TypeError: 'int' object is not subscriptable
+2025-12-24 19:22:13,801 - INFO - task2: sum_and_power()
+2025-12-24 19:22:13,802 - INFO - Update id=803257673 is not handled. Duration 4 ms by bot id=8546433771
+2025-12-24 19:22:13,802 - ERROR - Cause exception while process update id=803257673 by bot id=8546433771
+DataNotSetError: Все массивы должны быть одинаковой длины
+Traceback (most recent call last):
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/.venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/tg_bot.py", line 216, in task2_compute
+    result = sum_and_power(data["arr1"], data["arr2"], data["arr3"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alum/PycharmProjects/telegram-bot/pythonProject/task_2.py", line 90, in sum_and_power
+    raise DataNotSetError("Все массивы должны быть одинаковой длины")
+exceptions.DataNotSetError: Все массивы должны быть одинаковой длины
+2025-12-24 19:22:16,884 - INFO - generating a random array
+2025-12-24 19:22:16,884 - INFO - generating a random array
+2025-12-24 19:22:16,884 - INFO - generating a random array
+2025-12-24 19:22:17,021 - INFO - Update id=803257674 is handled. Duration 142 ms by bot id=8546433771
+2025-12-24 19:24:11,156 - WARNING - Received SIGINT signal
+2025-12-24 19:24:11,157 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:24:11,157 - INFO - Polling stopped
+2025-12-24 19:49:48,759 - INFO - Start polling
+2025-12-24 19:49:49,136 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:49:57,145 - INFO - Update id=803257675 is handled. Duration 1061 ms by bot id=8546433771
+2025-12-24 19:49:58,815 - INFO - Update id=803257676 is handled. Duration 158 ms by bot id=8546433771
+2025-12-24 19:50:00,719 - INFO - Generating a random array
+2025-12-24 19:50:00,719 - INFO - Generating a random array
+2025-12-24 19:50:00,852 - INFO - Update id=803257677 is handled. Duration 134 ms by bot id=8546433771
+2025-12-24 19:50:03,851 - INFO - Update id=803257678 is handled. Duration 327 ms by bot id=8546433771
+2025-12-24 19:50:08,137 - INFO - Update id=803257679 is handled. Duration 153 ms by bot id=8546433771
+2025-12-24 19:50:10,795 - INFO - Update id=803257680 is handled. Duration 209 ms by bot id=8546433771
+2025-12-24 19:50:11,957 - INFO - Update id=803257681 is handled. Duration 148 ms by bot id=8546433771
+2025-12-24 19:50:13,611 - INFO - generating a random array
+2025-12-24 19:50:13,611 - INFO - generating a random array
+2025-12-24 19:50:13,611 - INFO - generating a random array
+2025-12-24 19:50:13,758 - INFO - Update id=803257682 is handled. Duration 150 ms by bot id=8546433771
+2025-12-24 19:50:15,222 - INFO - task2: sum_and_power()
+2025-12-24 19:50:15,359 - INFO - Update id=803257683 is handled. Duration 140 ms by bot id=8546433771
+2025-12-24 19:50:20,298 - INFO - Update id=803257684 is handled. Duration 170 ms by bot id=8546433771
+2025-12-24 19:50:23,648 - INFO - Update id=803257685 is handled. Duration 1279 ms by bot id=8546433771
+2025-12-24 19:50:25,156 - INFO - Update id=803257686 is handled. Duration 142 ms by bot id=8546433771
+2025-12-24 19:50:27,182 - INFO - generating a random array
+2025-12-24 19:50:27,182 - INFO - generating a random array
+2025-12-24 19:50:27,400 - INFO - Update id=803257687 is handled. Duration 224 ms by bot id=8546433771
+2025-12-24 19:50:33,663 - INFO - task_3: sort_and_sum_arrays()
+2025-12-24 19:50:33,853 - INFO - Update id=803257688 is handled. Duration 194 ms by bot id=8546433771
+2025-12-24 19:50:37,813 - INFO - Update id=803257689 is handled. Duration 133 ms by bot id=8546433771
+2025-12-24 19:50:40,140 - INFO - Update id=803257690 is handled. Duration 153 ms by bot id=8546433771
+2025-12-24 19:50:50,861 - WARNING - Received SIGINT signal
+2025-12-24 19:50:50,862 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 19:50:50,862 - INFO - Polling stopped
+2025-12-24 20:12:14,680 - INFO - Бот запускается.
+2025-12-24 20:12:14,680 - INFO - Start polling
+2025-12-24 20:12:15,047 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 20:12:28,756 - INFO - 870796935 запустил бота (/start)
+2025-12-24 20:12:29,131 - INFO - Update id=803257691 is handled. Duration 376 ms by bot id=8546433771
+2025-12-24 20:12:30,995 - INFO - Update id=803257692 is handled. Duration 136 ms by bot id=8546433771
+2025-12-24 20:12:37,688 - INFO - Generating a random array
+2025-12-24 20:12:37,688 - INFO - Generating a random array
+2025-12-24 20:12:37,913 - INFO - 870796935 сгенерировал массивы для Задачи 1: A=[14, 26, 18, 30, 49], B=[6, 15, 36, 5, 36]
+2025-12-24 20:12:37,913 - INFO - Update id=803257693 is handled. Duration 228 ms by bot id=8546433771
+2025-12-24 20:12:41,284 - INFO - 870796935 вычислил Задачу 1, результат=0
+2025-12-24 20:12:41,285 - INFO - Update id=803257694 is handled. Duration 432 ms by bot id=8546433771
+2025-12-24 20:12:43,788 - INFO - 870796935 просмотрел результат Задачи 1: 0
+2025-12-24 20:12:43,789 - INFO - Update id=803257695 is handled. Duration 168 ms by bot id=8546433771
+2025-12-24 20:12:45,648 - INFO - 870796935 вернулся в главное меню из Задачи 1
+2025-12-24 20:12:45,826 - INFO - Update id=803257696 is handled. Duration 184 ms by bot id=8546433771
+2025-12-24 20:12:47,857 - INFO - Update id=803257697 is handled. Duration 174 ms by bot id=8546433771
+2025-12-24 20:12:49,367 - INFO - generating a random array
+2025-12-24 20:12:49,368 - INFO - generating a random array
+2025-12-24 20:12:49,368 - INFO - generating a random array
+2025-12-24 20:12:49,509 - INFO - 870796935 сгенерировал массивы для Задачи 2: A=[18, 30, 48, 12, 0], B=[22, 38, 34, 47, 0], C=[40, 24, 38, 24, 50]
+2025-12-24 20:12:49,509 - INFO - Update id=803257698 is handled. Duration 150 ms by bot id=8546433771
+2025-12-24 20:12:51,112 - INFO - task2: sum_and_power()
+2025-12-24 20:12:51,323 - INFO - 870796935 вычислил Задачу 2, результат=[{'index': 0, 'sum': 80, 'power': 18014398509481984000000000000000000}]
+2025-12-24 20:12:51,323 - INFO - Update id=803257699 is handled. Duration 213 ms by bot id=8546433771
+2025-12-24 20:12:53,178 - INFO - 870796935 просмотрел результат Задачи 2: [{'index': 0, 'sum': 80, 'power': 18014398509481984000000000000000000}]
+2025-12-24 20:12:53,179 - INFO - Update id=803257700 is handled. Duration 135 ms by bot id=8546433771
+2025-12-24 20:13:26,637 - INFO - 870796935 вернулся в главное меню из Задачи 2
+2025-12-24 20:13:26,639 - INFO - Update id=803257701 is handled. Duration 200 ms by bot id=8546433771
+2025-12-24 20:13:28,273 - INFO - Update id=803257702 is handled. Duration 286 ms by bot id=8546433771
+2025-12-24 20:13:30,585 - INFO - 870796935 выбрал ввод массивов для Задачи 3
+2025-12-24 20:13:30,719 - INFO - Update id=803257703 is handled. Duration 138 ms by bot id=8546433771
+2025-12-24 20:13:40,661 - INFO - 870796935 ввел массивы для Задачи 3: A=[1, 2, 3], B=[45, 6, 8]
+2025-12-24 20:13:40,661 - INFO - Update id=803257704 is handled. Duration 137 ms by bot id=8546433771
+2025-12-24 20:13:45,931 - INFO - task_3: sort_and_sum_arrays()
+2025-12-24 20:13:46,086 - INFO - 870796935 вычислил Задачу 3, результат=[9, 10, 46]
+2025-12-24 20:13:46,086 - INFO - Update id=803257705 is handled. Duration 159 ms by bot id=8546433771
+2025-12-24 20:13:48,320 - INFO - 870796935 просмотрел результат Задачи 3: [9, 10, 46]
+2025-12-24 20:13:48,320 - INFO - Update id=803257706 is handled. Duration 136 ms by bot id=8546433771
+2025-12-24 20:13:50,663 - INFO - 870796935 вернулся в главное меню из Задачи 3
+2025-12-24 20:13:50,663 - INFO - Update id=803257707 is handled. Duration 146 ms by bot id=8546433771
+2025-12-24 20:14:03,428 - WARNING - Received SIGINT signal
+2025-12-24 20:14:03,428 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-24 20:14:03,428 - INFO - Polling stopped
