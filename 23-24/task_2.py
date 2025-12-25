@@ -129,23 +129,23 @@ def task2_fsm():
     arr1 = None
     arr2 = None
     arr3 = None
-    result = None
-    state = "NO_DATA"
+    result = None # тут хранится итог
+    state = "NO_DATA" # начальное состояние
 
-    while True:
-        print("\n" + msgs["title"])
+    while True: # бесконечный цикл
+        print("\n" + msgs["title"]) # печать меню
         for option in msgs["menu"]:
             print(option)
 
-        choice = yield
+        choice = yield # остановка корутины и ожидание выбора пользователя
         logger.info(f"task2 choice={choice}, state={state}")
 
-        if choice == "5":
+        if choice == "5": # выход из задачи
             return
 
-        if state == "NO_DATA":
-            if choice == "1":
-                try:
+        if state == "NO_DATA": # логика состояния NO_DATA
+            if choice == "1": # ручной ввод массивов
+                try: 
                     arr1 = list(map(int, input("Первый массив: ").split()))
                     arr2 = list(map(int, input("Второй массив: ").split()))
                     arr3 = list(map(int, input("Третий массив: ").split()))
@@ -154,7 +154,7 @@ def task2_fsm():
                 except Exception as e:
                     print(msgs["input_error"])
                     logger.error(f"Input error: {e}")
-            elif choice == "2":
+            elif choice == "2": # генерация случайных массивов
                 try:
                     size = int(input("Размер массивов: "))
                     arr1 = generate_array(size)
@@ -171,8 +171,8 @@ def task2_fsm():
             else:
                 print(msgs["no_data"])
 
-        elif state in ("HAS_DATA", "HAS_RESULT"):
-            if choice == "3":
+        elif state in ("HAS_DATA", "HAS_RESULT"): # переходит в состояние
+            if choice == "3": # выполнение вычислений
                 try:
                     result = sum_and_power(arr1, arr2, arr3)
                     state = "HAS_RESULT"
@@ -181,14 +181,16 @@ def task2_fsm():
                 except Exception as e:
                     print(msgs["no_data"])
                     logger.error(f"Computation error: {e}")
-            elif choice == "4":
+                    
+            elif choice == "4": # показ результата
                 if not result:
                     print(msgs["no_data"])
                 else:
                     for r in result:
                         print(f"Index {r['index']}: sum={r['sum']}, power={r['power']}")
                     logger.info("Result displayed")
-            elif choice == "6":
+                    
+            elif choice == "6": # отключение логирования
                 logger.setLevel("CRITICAL")
                 print("Логирование отключено")
                 logger.critical("Logging disabled")

@@ -32,32 +32,32 @@ def main_fsm():
         None: Завершение работы приложения при выборе "Выход".
     """
     
-    msgs = MESSAGES["main_menu"]
+    msgs = MESSAGES["main_menu"] # получение строк меню (сообщение)
 
-    while True:
+    while True: 
         print("\n" + msgs["title"])
         for option in msgs["options"]:
             print(option)
 
-        choice = yield
+        choice = yield  # Корутина приостанавливается и ждёт, ожиадние выбора пользователя
         logger.info(f"MAIN choice: {choice}")
 
         try:
             if choice == "1":
-                yield from task1_fsm()
+                yield from task1_fsm()  # yield from передаёт выполнение другой корутине
             elif choice == "2":
                 yield from task2_fsm()
             elif choice == "3":
                 yield from task3_fsm()
-            elif choice == "0":
+            elif choice == "0": # выход из программы
                 print(msgs["exit"])
                 logger.info("Application exit")
                 return
-            else:
+            else: # неверный ввод
                 print(msgs["invalid"])
                 raise InputError(f"Неверный пункт меню: {choice}")
 
-        except AppError as e:
+        except AppError as e: # обработка ошибок
             print(f"Ошибка приложения: {e}")
             logger.error(f"AppError: {e}")
         except Exception as e:
@@ -66,8 +66,8 @@ def main_fsm():
 
 
 def main():
-    fsm = main_fsm()
-    next(fsm)  # инициализация корутины
+    fsm = main_fsm() # fsm — это генератор, main_fsm() — это корутина
+    next(fsm)  # инициализация корутины, Запускает корутину до первого yield
 
     msgs = MESSAGES["main_menu"]
     while True:
