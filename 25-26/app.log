@@ -535,3 +535,27 @@ exceptions.DataNotSetError: Все массивы должны быть один
 2025-12-24 20:14:03,428 - WARNING - Received SIGINT signal
 2025-12-24 20:14:03,428 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
 2025-12-24 20:14:03,428 - INFO - Polling stopped
+2025-12-25 09:26:34,868 - INFO - Бот запускается.
+2025-12-25 09:26:34,869 - INFO - Start polling
+2025-12-25 09:26:35,446 - INFO - Run polling for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-25 09:26:35,578 - INFO - 870796935 запустил бота (/start)
+2025-12-25 09:26:35,903 - INFO - Update id=803257708 is handled. Duration 325 ms by bot id=8546433771
+2025-12-25 09:26:45,298 - INFO - Update id=803257709 is handled. Duration 145 ms by bot id=8546433771
+2025-12-25 09:26:49,899 - INFO - Generating a random array
+2025-12-25 09:26:49,899 - INFO - Generating a random array
+2025-12-25 09:26:50,031 - INFO - 870796935 сгенерировал массивы для Задачи 1: A=[45, 5, 26, 15, 38], B=[29, 0, 7, 10, 46]
+2025-12-25 09:26:50,031 - INFO - Update id=803257710 is handled. Duration 133 ms by bot id=8546433771
+2025-12-25 09:26:53,617 - INFO - 870796935 вычислил Задачу 1, результат=0
+2025-12-25 09:26:53,618 - INFO - Update id=803257711 is handled. Duration 267 ms by bot id=8546433771
+2025-12-25 09:27:01,496 - INFO - 870796935 просмотрел результат Задачи 1: 0
+2025-12-25 09:27:01,496 - INFO - Update id=803257712 is handled. Duration 128 ms by bot id=8546433771
+2025-12-25 09:27:06,529 - INFO - 870796935 вернулся в главное меню из Задачи 1
+2025-12-25 09:27:06,674 - INFO - Update id=803257713 is handled. Duration 146 ms by bot id=8546433771
+2025-12-25 09:27:14,466 - INFO - Update id=803257714 is handled. Duration 126 ms by bot id=8546433771
+2025-12-25 09:27:53,880 - INFO - 870796935 выбрал ввод массивов для Задачи 2
+2025-12-25 09:27:54,019 - INFO - Update id=803257715 is handled. Duration 140 ms by bot id=8546433771
+2025-12-25 09:28:08,086 - INFO - 870796935 ввел массивы для Задачи 2: A=[1, 2, 3], B=[4, 5, 6], C=[7, 8, 9]
+2025-12-25 09:28:08,086 - INFO - Update id=803257716 is handled. Duration 121 ms by bot id=8546433771
+2025-12-25 09:45:38,449 - WARNING - Received SIGINT signal
+2025-12-25 09:45:38,450 - INFO - Polling stopped for bot @TTPracticeBot id=8546433771 - 'TTPractice'
+2025-12-25 09:45:38,450 - INFO - Polling stopped
