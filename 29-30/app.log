@@ -1,0 +1,29 @@
+2025-12-26 13:13:11,402 - INFO - MAIN choice: 1
+2025-12-26 13:13:16,122 - INFO - MAIN choice: 1
+2025-12-26 13:13:17,102 - INFO - MAIN choice: 2
+2025-12-26 13:13:18,303 - INFO - MAIN choice: 2
+2025-12-26 13:13:19,206 - INFO - MAIN choice: 2
+2025-12-26 13:24:28,881 - INFO - MAIN choice: 1
+2025-12-26 13:24:32,461 - INFO - task1 choice=1, state=NO_DATA
+2025-12-26 13:24:55,985 - INFO - MAIN choice: 1
+2025-12-26 13:24:57,364 - INFO - task1 choice=2, state=NO_DATA
+2025-12-26 13:25:06,507 - INFO - Arrays loaded
+2025-12-26 13:25:09,064 - INFO - task1 choice=3, state=HAS_DATA
+2025-12-26 13:25:11,280 - INFO - task1 choice=4, state=HAS_RESULT
+2025-12-26 13:27:54,660 - INFO - MAIN choice: 1
+2025-12-26 13:28:01,567 - INFO - task1 choice=2, state=NO_DATA
+2025-12-26 13:28:04,075 - INFO - Arrays loaded
+2025-12-26 13:28:34,364 - INFO - task1 choice=3, state=HAS_DATA
+2025-12-26 13:28:48,781 - INFO - task1 choice=4, state=HAS_RESULT
+2025-12-26 13:29:17,202 - INFO - task1 choice=5, state=HAS_RESULT
+2025-12-26 13:29:19,249 - INFO - MAIN choice: 2
+2025-12-26 13:29:23,630 - INFO - task2 choice=1, state=NO_DATA
+2025-12-26 13:29:41,422 - INFO - Arrays set
+2025-12-26 13:29:45,751 - INFO - task2 choice=3, state=HAS_DATA
+2025-12-26 13:29:47,310 - INFO - task2 choice=4, state=HAS_RESULT
+2025-12-26 13:29:50,274 - INFO - task2 choice=5, state=HAS_RESULT
+2025-12-26 13:29:53,316 - INFO - MAIN choice: 3
+2025-12-26 13:29:55,144 - INFO - task3 choice=2, state=NO_DATA
+2025-12-26 13:29:58,838 - INFO - task3 choice=3, state=HAS_DATA
+2025-12-26 13:30:00,133 - INFO - task3 choice=4, state=HAS_RESULT
+2025-12-26 13:30:04,148 - INFO - task3 choice=6, state=HAS_RESULT

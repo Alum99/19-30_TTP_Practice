@@ -92,13 +92,7 @@ def task2_fsm():
                 )[1],
 
                 "4": lambda: (
-                    list(map(
-                        lambda r: print(
-                            f"Index {r['index']}: sum={r['sum']}, power={r['power']}"
-                        ),
-                        result
-                    ))
-                    if result else print(msgs["no_data"])
+                    print(f"Результат: {result}") if state == "HAS_RESULT" else print(msgs["no_data"])
                 ),
 
                 "6": lambda: (
