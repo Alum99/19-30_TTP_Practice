@@ -6,11 +6,11 @@ from exceptions import InputError, InvalidValueError, DataNotSetError, Operation
 
 
 # генерация массива случайных чисел
-generate_array_fp = lambda size, min_v=0, max_v=50: (            # анонимная функцию, которая возвращает массив случайных чисел
+generate_array_fp = lambda size, min_v=0, max_v=50: (         # анонимная функцию, которая возвращает массив случайных чисел
     [random.randint(min_v, max_v) for _ in range(size)]       # генератор списка: длиной size, случайные числа между 0 и 50
     if size > 0 else (_ for _ in ()).throw(InvalidValueError("Размер массива должен быть положительным"))
 )   # если размер <= 0, выбрасываем исключение InvalidValueError.
-
+# #list comprehension быстрее, чем ручной for + append
 
 # ввод массива вручную через пробел
 def input_array_manual_fp(size: int) -> list[int]:
