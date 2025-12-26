@@ -13,8 +13,8 @@ generate_array_fp = lambda size, min_v=0, max_v=50: (         # анонимна
 # #list comprehension быстрее, чем ручной for + append
 
 # ввод массива вручную через пробел
-input_array_manual_fp = lambda size: (
-    lambda raw: (
+input_array_manual_fp = lambda size: ( # лямбда-функцию, которая принимает один аргумент size
+    lambda raw: ( # Внутри внешней лямбды создаётся вложенная лямбда
         list(map(int, raw.split()))
         if raw and all(x.lstrip("-").isdigit() for x in raw.split()) and len(raw.split()) == size
         else (_ for _ in ()).throw(InputError(f"Нужно ввести {size} чисел"))
@@ -26,40 +26,36 @@ reverse_number = lambda n: int(str(n)[::-1])
 
 
 # подсчет общих чисел с функциональным подходом
-def count_common_and_reversed_fp(arr1: list[int], arr2: list[int]) -> int:
-    if not arr1 or not arr2:     # проверка, что массивы не пустые, иначе ошибка
-        raise DataNotSetError("Массивы не заданы или пусты")
+count_common_and_reversed_fp = lambda arr1, arr2: ( # лямбда-функцию, которая принимает два массива: arr1 и arr2
+    (_ for _ in ()).throw(DataNotSetError("Массивы не заданы или пусты"))
+    if not arr1 or not arr2
+    else (
+        lambda arr2_set, common_numbers: len( # Если массивы не пустые, создаём вложенную лямбду
+            reduce(lambda acc, x: acc + [x] if x not in acc else acc, common_numbers, [])
+        )
+    )(
+        set(arr2).union(set(map(reverse_number, arr2))),  # объединяем arr2 и перевёрнутые числа через union()
+        list(filter(
+            lambda x: x in set(arr2).union(set(map(reverse_number, arr2))) 
+                      or reverse_number(x) in set(arr2).union(set(map(reverse_number, arr2))),
+            arr1
+        ))
+    )
+)
 
-    try:
-        # множество arr2_set, содержит: Все числа из arr2 и все перевернутые из arr2
-        # map для функционального преобразования, и | объединяет множества
-        arr2_set = set(arr2) | set(map(reverse_number, arr2))
-
-        # фильтрация чисел первого массива, которые встречаются во втором (или их перевернутые)
-        common_numbers = list(filter(lambda x: x in arr2_set or reverse_number(x) in arr2_set, arr1))
-        # filter() — выбираем из arr1 те числа: либо есть числа в arr2_set, либо есть числа перевернутые в arr2_set
-        # lambda x: — анонимная функция для условия фильтрации
-
-        # удаление дубликатов через reduce
-        unique_count = reduce(lambda acc, x: acc + [x] if x not in acc else acc, common_numbers, [])
-        # reduce() — сворачиваем список common_numbers в список уникальных элементов
-
-        return len(unique_count)  # количество уникальных общих чисел
-    except Exception as e:
-        raise OperationError(f"Ошибка выполнения подсчёта: {e}") from e
 
 
 def task_1_menu_fp():
-    msgs = Messages["TASK1"]  # теперь msgs — словарь
-    state = {"arr1": None, "arr2": None, "result": None}
+    msgs = Messages["TASK1"]  # словарь сообщений для задачи 1
+    state = {"arr1": None, "arr2": None, "result": None}  # словарь, где хранится текущее состояние программы
 
-    actions = {
-        "1": lambda: (
+    actions = { # словарь действий
+        "1": lambda: (    # ввод массива вручную
             state.update({"arr1": input_array_manual_fp(int(input("Введите размер первого массива: "))),
                           "arr2": input_array_manual_fp(int(input("Введите размер второго массива: "))) }),
             logger.info("Массивы введены вручную")
         ),
-        "2": lambda: (
+        "2": lambda: ( # генерация массивов случайно
             (_size := int(input("Введите размер массивов: "))),
             state.update({"arr1": generate_array_fp(_size),
                           "arr2": generate_array_fp(_size)}),
@@ -67,27 +63,31 @@ def task_1_menu_fp():
             print("Второй массив:", state["arr2"]),
             logger.info("Массивы сгенерированы случайно")
         ),
-        "3": lambda: (
+        "3": lambda: ( # подсчёт общих чисел с учётом реверса
             (_ for _ in ()).throw(DataNotSetError("Массивы не заданы")) if None in (state["arr1"], state["arr2"]) else
             state.update({"result": count_common_and_reversed_fp(state["arr1"], state["arr2"])}),
             logger.info("Подсчёт выполнен")
         ),
-        "4": lambda: (
+        "4": lambda: ( # вывод результата
             print(msgs["no_data"]) if state["result"] is None else print(f"Результат: {state['result']}"),
             logger.info("Результат показан")
         ),
+        # выход в главное меню
         "5": lambda: (_ for _ in ()).throw(SystemExit),
+        
+        # отключение логирования
         "6": lambda: (logger.setLevel("CRITICAL"), print("Логирование отключено"), logger.critical("Установлен уровень CRITICAL"))
     }
 
     while True:
-        print("\n" + msgs["title"])
-        list(map(print, msgs["menu"]))
-        choice = input(msgs["prompt"])
+        print("\n" + msgs["title"]) # Печатаем заголовок меню задачи 1
+        list(map(print, msgs["menu"])) # Выводим все пункты меню
+        choice = input(msgs["prompt"]) # Получаем ввод пользователя
         logger.info(f"task1: выбран пункт {choice}")
 
-        try:
+        try: # Пытаемся выполнить действие из словаря actions по выбранному пункту choice
             actions.get(choice, lambda: print(msgs["invalid_choice"]) or logger.info("Неверный пункт меню task1"))()
+            # если ключа нет, вызывается лямбда, которая выводит сообщение об ошибке
         except AppError as e:
             logger.error(str(e))
             print(msgs["input_error"])
@@ -99,17 +99,18 @@ def task_1_menu_fp():
             return
 
 def main():
-    main_actions = {
+    main_actions = { # Словарь действий главного меню
         "1": task_1_menu,
         "0": lambda: (_ for _ in ()).throw(SystemExit)
     }
 
     while True:
-        main_msgs = Messages["MENU_MAIN"]
-        print("\n" + main_msgs["title"])
-        list(map(print, main_msgs["options"]))
-        choice = input(main_msgs["prompt"])
-        try:
+        main_msgs = Messages["MENU_MAIN"]  # словарь сообщений для главного меню
+        print("\n" + main_msgs["title"])   # заголовок меню и все пункты меню
+        list(map(print, main_msgs["options"])) 
+        choice = input(main_msgs["prompt"]) # ввод пользователя для выбора пункта меню
+        
+        try: # Пытаемся выполнить действие из словаря main_actions
             main_actions.get(choice, lambda: print(main_msgs["invalid_choice"]))()
         except SystemExit:
             print(main_msgs["exit"])
