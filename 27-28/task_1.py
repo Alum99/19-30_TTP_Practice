@@ -13,14 +13,13 @@ generate_array_fp = lambda size, min_v=0, max_v=50: (         # анонимна
 # #list comprehension быстрее, чем ручной for + append
 
 # ввод массива вручную через пробел
-def input_array_manual_fp(size: int) -> list[int]:
-    raw = input(f"Введите {size} чисел через пробел: ").strip()
-    if not raw:
-        raise InputError("Пустой ввод")
-    numbers = list(map(int, raw.split()))
-    if len(numbers) != size:
-        raise InputError(f"Нужно ввести {size} чисел")
-    return numbers
+input_array_manual_fp = lambda size: (
+    lambda raw: (
+        list(map(int, raw.split()))
+        if raw and all(x.lstrip("-").isdigit() for x in raw.split()) and len(raw.split()) == size
+        else (_ for _ in ()).throw(InputError(f"Нужно ввести {size} чисел"))
+    )
+)(input(f"Введите {size} чисел через пробел: ").strip())
 
 # переворот числа
 reverse_number = lambda n: int(str(n)[::-1])
