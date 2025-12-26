@@ -14,14 +14,14 @@ def main_fsm():
     выполняет переключение между вложенными автоматами.
     """
     
-    msgs = MESSAGES["main_menu"]
+    msgs = MESSAGES["main_menu"] # словарь с текстами для главного меню
 
     while True:
         print("\n" + msgs["title"])
         for opt in msgs["options"]:
             print(opt)
 
-        choice = yield
+        choice = yield # Ожидаем ввод пользователя через send() и сохраняем его в choice.
         logger.info(f"MAIN choice: {choice}")
 
         # вложенные автоматы — через yield from
